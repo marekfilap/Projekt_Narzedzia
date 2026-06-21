@@ -10,6 +10,8 @@ jobs:
     steps:
       - checkout
       - run: make deps
+      - run: make lint
+      - run: make docker_build
       - run: make test
 
 workflows:
